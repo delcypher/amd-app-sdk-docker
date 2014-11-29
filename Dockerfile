@@ -21,7 +21,7 @@ RUN rm AMD-APP-SDK-*.sh && rm -rf AMDAPPSDK-*
 RUN rm -rf /opt/AMDAPPSDK-*/samples/{aparapi,bolt,opencv}
 
 # Put the includes and library where they are expected to be
-RUN ln -s /opt/AMDAPPSDK-2.9-1/include/CL /usr/include/ && ln -s /opt/AMDAPPSDK-2.9-1/lib/x86_64/libOpenCL.so.1 /usr/lib/OpenCL.so
+RUN ln -s /opt/AMDAPPSDK-2.9-1/include/CL /usr/include/ && ln -s /opt/AMDAPPSDK-2.9-1/lib/x86_64/libOpenCL.so.1 /usr/lib/libOpenCL.so
 
 # Provide easy access to root if needed
 RUN echo "root:root" | chpasswd
